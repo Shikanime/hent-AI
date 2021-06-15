@@ -1,0 +1,30 @@
+// 20210425144714
+// https://raw.githubusercontent.com/Shikanime/Shikanime/main/samples/python/.devcontainer/devcontainer.json
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "zsh": {
+        "path": "/bin/zsh",
+        "args": [
+          "-l"
+        ]
+      }
+    },
+    "python.linting.enabled": true
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
+    "mechatroner.rainbow-csv",
+    "foxundermoon.shell-format"
+  ],
+  "runArgs": [
+    "--gpus=all"
+  ],
+  "postCreateCommand": ".devcontainer/postCreateCommand.sh",
+  "remoteUser": "sakamoto"
+}
